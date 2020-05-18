@@ -4,7 +4,9 @@ import matplotlib.pyplot as plt
 #   PLOTDATA(x,y) plots the data points and gives the figure axes labels of
 #   population and profit.
 def plotData(X, y):
-    plt.figure()    # open a new figure window
+    
+    plt.ion()
+    fig, ax = plt.subplots()    # open a new figure window
     # ====================== YOUR CODE HERE ======================
     # Instructions: Plot the training data into a figure using the 
     #               "figure" and "plot" commands. Set the axes labels using
@@ -19,7 +21,7 @@ def plotData(X, y):
 
     plt.xlabel('Population of City in 10,000s') # Set the y􀀀axis label
     plt.ylabel('Profit in $10,000s') # Set the x􀀀axis label
-    plt.show()
+    plt.draw()
     return
 
 

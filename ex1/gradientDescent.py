@@ -20,8 +20,9 @@ def gradientDescent(X, y, theta, alpha, num_iters):
         # Hint: While debugging, it can be useful to print out the values
         #       of the cost function (computeCost) and gradient here.
         #
-
-
+        hypothesis = X @ theta
+        diff = np.subtract(hypothesis, y)
+        theta = np.subtract(theta, (alpha / m) * X.transpose() @ diff)
 
 
 
